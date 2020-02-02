@@ -1,0 +1,21 @@
+<div *ngIf="dettaglio.id!==null">
+  <h2>{{dettaglio.cognome}} details!</h2>
+  <div><label>id: </label>{{dettaglio.id}}</div>
+  <div><label>cognome: </label>{{dettaglio.cognome}}</div>
+  <div><label>nome: </label>{{dettaglio.nome}}</div>
+  <div><label>data nascita: </label>{{dettaglio.dataNascita}}</div>
+	<div>
+		<label>nome: </label>
+		<input id="txtNomeDett" type="text" [disabled]="editing===false" [(ngModel)]="dettaglio.nome">
+	</div>
+
+	<div>
+		<p appCambiaColore coloreNuovo="red" coloreSfondoInizialeInput="yellow">Esempio direttiva custom che modifica il colore di sfondo su un element p</p>
+		<h3 appCambiaColore coloreNuovo="red" coloreSfondoInizialeInput="yellow">Esempio direttiva custom che modifica il colore di sfondo su elemnt H3</h3>
+	
+	</div>
+
+	<button (click)="edit()">Modifica</button>
+	<button (click)="save()">Salva</button>
+	<button (click)="goBack()">Back</button>
+</div>

@@ -1,0 +1,53 @@
+
+<h2>Ricerca Anagrafica</h2>
+
+
+	<div>
+    <label>Cognome:</label>
+    <input id="txtCognomeFilter" type="text" [(ngModel)]="filter.cognome" placeholder="inserire cognome" >
+    <div class="text-danger" *ngIf="filter.cognome===null || filter.cognome===''">Obbligatorio</div>
+  </div>
+  <div>
+  <label>Comune nascita (list normale)</label>
+  <select id="comList" name="comList" [(ngModel)]="filter.codiceComuneNascita" (change)="onChangeComuneNascita($event)">
+      <option *ngFor="let comune of elencoComuni" [value]="comune.codice">{{comune.descrizione}}</option>
+  </select>
+ 
+</div>
+
+<div class="div">
+<label for="start">Data nascita:</label>
+<input type="date" id="start" [(ngModel)]="filter.dataNascita"
+       name="dataNascita"  value="01/01/2019">
+</div>
+
+<label for="start">Risultato ricerca:</label>
+<ul class="heroes">
+  <li *ngFor="let ana of elencoAnagrafica" 
+      (click)="onSelectAnagrafica(ana)"
+      [class.selected]="ana === elementoSelezionato">
+    <span class="badge">{{ana.id}}</span>{{ana.codiceFiscale}} {{ana.cognome}} {{ana.nome}} {{ana.dataNascita | date:'dd/MM/yyyy hh:mm:ss'}} 
+	</li>
+</ul>
+
+<div *ngIf="elementoSelezionato.id">
+  <h2>
+    {{elementoSelezionato.cognome | uppercase}} e' l'elemento selezionato attualmente
+  </h2>
+  <button (click)="visualizzaDettaglio()">Dettaglio anagrafica</button>
+</div>
+
+<!-- provare nella ricerca sopra a mettere la classe selected
+<ul class="heroes">
+	<li *ngFor="let hero of heroes" (click)="onSelect(hero)" 	[class.selected]="hero === selectedHero">
+		<span class="badge">{{hero.id}}</span> {{hero.name}}
+	</li>
+</ul>
+-->
+
+
+<button (click)="printModel()">Stampa contenuto model</button>
+<button (click)="prove()">Prove</button>
+<button (click)="ricerca()">Cerca</button>
+<button (click)="indietro()">Indietro</button>
+

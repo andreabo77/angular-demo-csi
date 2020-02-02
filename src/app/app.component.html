@@ -1,0 +1,15 @@
+<main>
+
+
+<h1>{{title}}</h1>
+<div *ngIf="currentUser">
+    <p>Utente corrente: {{currentUser.nome}} {{currentUser.cognome}}</p>
+    <button (click)="ssoLogout()">SSO logout </button>
+    <button (click)="localLogout()">Local logout </button>
+</div>
+<a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+<a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+<a routerLink="/testpage" routerLinkActive="active">(Test)</a>
+<router-outlet></router-outlet>
+<!--<img src="./assets/angular.png">-->
+</main>
