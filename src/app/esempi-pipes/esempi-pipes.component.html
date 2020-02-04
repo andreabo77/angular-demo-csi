@@ -1,0 +1,31 @@
+<h2>Prove Pipe</h2>
+ 
+<div>
+  <h3>Stringhe</h3> 
+  
+		<label>Input stringa:</label>
+		<input type="text" [(ngModel)]=pipeResult>
+	<br><label>uppercase: {{pipeResult | uppercase}}</label>
+	<br><label>truncate (5): {{pipeResult | truncate:5}}</label>
+	<br><label>leftpad (10): {{pipeResult | leftPad:10:'0'}}</label>
+	<div>
+    <h3>Numeri</h3>  
+   
+		<label>Input numero:</label>
+		<input type="number" [(ngModel)]=pipeResultNumber>
+		<br><label>pipe number (1.2-2) : {{pipeResultNumber | number:"1.2-2"}}</label>
+		<label>
+			<br>
+			<br>sintassi a.b-c dove
+			<br>a = numero minimo di cifre intere (default 1)
+			<br>b = numero minimo di cifre decimali (default 0)
+			<br>c = numero massimo di cifre decimali (default 3)
+		</label>
+	</div>
+	<div>
+		<h3>Date</h3> 
+    
+		<label>Input date:</label>
+		<input type="date" [(ngModel)]=pipeResultDate>
+	<br><label>pipe con format dd/MM/yyyy HH:mm:ss - SSS: {{pipeResultDate | date:"dd/MM/yyyy HH:mm:ss - SSS"}}</label>
+	<div>

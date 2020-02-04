@@ -1,0 +1,15 @@
+<div >
+  <br>
+  <br>
+  <span>Sfoglia</span>
+  <input type="file" id="fileToUpload" name="fileToUpload" 
+    (change)="handleFileInput($event.target.files)" 
+    />
+    <label #labelPersonalizzata for="fileToUpload">Label gestita con @ViewChild</label>
+    <div >
+    <label>Messaggi:</label>
+  </div>
+  <div>
+    <textarea rows="10" cols="50" >{{messaggi}}</textarea>
+  </div>
+</div>
