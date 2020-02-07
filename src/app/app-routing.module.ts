@@ -6,7 +6,7 @@ import { HeroDetailComponent }  from './hero-detail.component';
 import { TestPageComponent} from './test-page.component';
 import { AnagraficaRicercaComponent } from './anagrafica-ricerca/anagrafica-ricerca.component';
 import { AnagraficaDettaglioComponent } from './anagrafica-dettaglio/anagrafica-dettaglio.component';
-
+import { EsempiFilesComponent} from './esempi-files/esempi-files.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'testpage', component:  TestPageComponent }, 
   { path: 'anagrafica/ricerca',  component: AnagraficaRicercaComponent },
   { path: 'anagrafica/dettaglio/:id', component: AnagraficaDettaglioComponent },
+  { path: 'esempi-files', component: EsempiFilesComponent },
 ];
 
 @NgModule({

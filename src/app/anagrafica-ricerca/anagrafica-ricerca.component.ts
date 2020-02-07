@@ -66,6 +66,11 @@ ricerca(){
 
   }
 
+  esempiFiles(){
+    console.log('AnagraficaRicercaComponent.esempiFiles apro maschera /esempi-files');
+    this.router.navigate(['/esempi-files']);
+  }
+
   printModel(){
     console.log('AnagraficaRicercaComponent-Filter = ' + JSON.stringify(this.filter));
     console.log('AnagraficaRicercaComponent-elementoSelezionato = ' + JSON.stringify(this.elementoSelezionato));
