@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AnagraficaRicercaComponent } from './anagrafica-ricerca/anagrafica-ricerca.component';
 import { AnagraficaDettaglioComponent } from './anagrafica-dettaglio/anagrafica-dettaglio.component';
 import { CambiaColoreDirective } from './directives/cambia-colore.directive';
+import { EsempiFilesComponent} from './esempi-files/esempi-files.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { CambiaColoreDirective } from './directives/cambia-colore.directive';
     TestPageComponent,
     AnagraficaRicercaComponent,
     AnagraficaDettaglioComponent,
-    CambiaColoreDirective
+    CambiaColoreDirective,
+    EsempiFilesComponent
   ],
   providers: [ HeroService, ConfigService, SecurityService
    ],
